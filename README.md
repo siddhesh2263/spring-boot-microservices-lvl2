@@ -16,3 +16,7 @@ eg: Eureka server
 eg: NGINX, AWS etc.
 
 ![Alt text](assests/Layout.png?raw=true "Microservice layout")
+
+## Eureka Server:
+
+![Alt text](assests/Eureka.JPG?raw=true "Eureka layout")
