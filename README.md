@@ -1,22 +1,22 @@
-## A microservice application to demonstrate communication and service discovery.
+## Spring-based microservice with Fault Tolerance and Resiliance using Circuit Breaker Pattern (Hystrix)
 
-It consists of 3 Spring Boot applications, and communicate using the RestTemplate object. A WebClient Builder is also looked into, since the RestTemplate is being planned to be depreceated. 
-The WebClient Builder is based on the reactive programming paradigm in Java.
 
-### The different microservices are:
-1. Movie Catalogue Service
-2. Movie Info Service
-3. Ratings Data Service
+There are multiple points of failure in a microservice ecosystem. There is a limitation on the resources a microservice application depends on, such as:
+1. The number of requests being sent
+2. Thread pool capacity
 
-### (**Important)
-There are 2 types of service discovery:
-1. Client Side Service Discovery
-eg: Eureka server
-2. Server Side Service Discovery
-eg: NGINX, AWS etc.
 
-![Alt text](assests/Layout.png?raw=true "Microservice layout")
+Different ways to manage fault tolerance in a microservice system are:
+1. Create more instances of the microservice
+2. Use the Circuit Breaker Pattern
+3. Using the Bulkhead Pattern
 
-## Eureka Server:
+While using Hystrix for implementing the Circuit Breaker Pattern, the issues related to Hystrix Proxies must be taken into account.
 
-![Alt text](assests/Eureka.JPG?raw=true "Eureka layout")
+### All microservices up and running:
+
+![Alt text](assests/HystrixP1.JPG?raw=true "All microservices running")
+
+### In the event one or more microservices are down:
+
+![Alt text](assests/HystrixP2.JPG?raw=true "One microservice down")
